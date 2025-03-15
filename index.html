@@ -1,0 +1,847 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Betting Website</title>
+  <!-- Tell the browser to be responsive to screen width -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="style/all.min.css">
+  <link rel="stylesheet" href="style/fontawesome.min.css">
+   
+  <!-- Theme style -->
+  <link rel="stylesheet" href="style/theme.css">
+  <!-- overlayScrollbars -->
+  <link rel="stylesheet" href="style/OverlayScrollbars.min.css">
+  <!-- slick slider  -->
+   <link rel="stylesheet" href="style/slick.css">
+     <!-- slick theme  -->
+     <link rel="stylesheet" href="style/slick-theme.css">
+     <!-- responsive css -->
+      <link rel="stylesheet" href="style/responsive.css">
+  <!-- custom css -->
+   <link rel="stylesheet" href="style/style.css">
+  <!-- Google Font: Source Sans Pro -->
+  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
+</head>
+<body class="hold-transition sidebar-mini layout-fixed sidebar-collapse">
+
+<div class="wrapper">
+
+  <!-- Navbar -->
+   
+  <nav class="main-header navbar navbar-expand navbar-white navbar-light">
+    <!-- Left navbar links -->
+    <ul class="navbar-nav">
+      <li class="nav-item menu_bar">
+        <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
+      </li>
+      <li>
+      <li class="nav-link logo pr-0">
+        <a href="#"><img src="assets/logo.png" alt=""></a>
+      </li>
+      <li class="nav-link pr-4">
+        <div class="reward d-flex align-items-center justify-content-center">
+          <div class="left mr-2">
+            <i class="fa-solid fa-coins"></i>
+          </div>
+          <div class="right">
+            <p>100</p>
+          </div>
+        </div>
+      </li>
+      <div class="menu_item">
+        <ul class="d-flex">
+          <li class="nav-link">
+            <i class="fa-solid fa-gift"></i>
+            <div class="bonus">
+              <a href="">Bonuses</a>
+            </div>
+          </li>
+          <li class="nav-link">
+            <i class="fa-solid fa-users"></i>
+            <div class="user">
+              <a href="">Parnership</a>
+            </div>
+          </li>
+          <li class="nav-link">
+            <i class="fa-solid fa-chart-pie"></i>
+            <div class="chart">
+              <a href="">Leaderboard</a>
+            </div>
+          </li>
+          <li class="nav-link">
+            <i class="fa-solid fa-circle-info"></i>
+            <div class="support">
+              <a href="">Support</a>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </ul>
+
+    <!-- Right navbar links -->
+
+     <div class="rigth_nav d-flex ml-auto">
+    <div class="user_form mr-3">
+      <button type="button" class="btn btn_hover_one mr-2" data-bs-toggle="modal" data-bs-target="#login" onclick="showModal('login')">Log In</button>
+      <button type="button" class="btn btn_hover_two" data-bs-toggle="modal" data-bs-target="#signUp" onclick="showModal('signUp')">Register</button>
+    </div>
+     <div class="chats">
+    <ul class="navbar-nav">
+      <!-- Messages Dropdown Menu -->
+      <li class="nav-item dropdown">
+        <a class="nav-link message-icon" data-bs-toggle="dropdown" href="#">
+          <i class="far fa-comments"></i>
+          <span class="badge badge-danger navbar-badge">3</span>
+        </a>
+        <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
+          <a href="#" class="dropdown-item">
+            <!-- Message Start -->
+            <div class="media">
+              <img src="dist/img/user1-128x128.jpg" alt="User Avatar" class="img-size-50 mr-3 img-circle">
+              <div class="media-body">
+                <h3 class="dropdown-item-title">
+                  Brad Diesel
+                  <span class="float-right text-sm text-danger"><i class="fas fa-star"></i></span>
+                </h3>
+                <p class="text-sm">Call me whenever you can...</p>
+                <p class="text-sm text-muted"><i class="far fa-clock mr-1"></i> 4 Hours Ago</p>
+              </div>
+            </div>
+            <!-- Message End -->
+          </a>
+          <div class="dropdown-divider"></div>
+          <a href="#" class="dropdown-item">
+            <!-- Message Start -->
+            <div class="media">
+              <img src="dist/img/user8-128x128.jpg" alt="User Avatar" class="img-size-50 img-circle mr-3">
+              <div class="media-body">
+                <h3 class="dropdown-item-title">
+                  John Pierce
+                  <span class="float-right text-sm text-muted"><i class="fas fa-star"></i></span>
+                </h3>
+                <p class="text-sm">I got your message bro</p>
+                <p class="text-sm text-muted"><i class="far fa-clock mr-1"></i> 4 Hours Ago</p>
+              </div>
+            </div>
+            <!-- Message End -->
+          </a>
+          <div class="dropdown-divider"></div>
+          <a href="#" class="dropdown-item">
+            <!-- Message Start -->
+            <div class="media">
+              <img src="dist/img/user3-128x128.jpg" alt="User Avatar" class="img-size-50 img-circle mr-3">
+              <div class="media-body">
+                <h3 class="dropdown-item-title">
+                  Nora Silvester
+                  <span class="float-right text-sm text-warning"><i class="fas fa-star"></i></span>
+                </h3>
+                <p class="text-sm">The subject goes here</p>
+                <p class="text-sm text-muted"><i class="far fa-clock mr-1"></i> 4 Hours Ago</p>
+              </div>
+            </div>
+            <!-- Message End -->
+          </a>
+          <div class="dropdown-divider"></div>
+          <a href="#" class="dropdown-item dropdown-footer">See All Messages</a>
+        </div>
+      </li>
+    </ul>
+  </nav>
+</div>
+</div>
+  <!-- /.navbar -->
+
+
+<!-- Login Modal Start -->
+<!-- Modal -->
+<div class="modal" id="login" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title" id="staticBackdropLabel">Log In</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form action="#">
+          <div class="form_field">
+            <input type="email" name="email" class="form-control" id="email" placeholder="Email" required>
+          </div>
+          <div class="form_field mt-3">
+            <input type="password" name="password" class="form-control" id="password" placeholder="Password" required>
+          </div>
+          <div class="form_field d-flex align-items-center justify-content-between">
+            <div class="remember">
+              <input type="checkbox" name="remember" class="form-check-input" id="remember">
+              <label class="form-check-label" for="remember">Remember</label>
+            </div>
+            <div class="forget_pwd">
+              <a href="#">Forgot your password?</a>
+            </div>
+          </div>
+          <button type="submit" class="btn btn-primary">Log In</button>
+          <div class="dont_have d-flex">
+            <p>Don't have an account?</p>
+            <a href="#" onclick="switchModal('login', 'signUp')">Create an account</a>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div> 
+<!-- Login Modal End -->
+
+<!-- Sign up Modal Start -->
+<!-- Modal -->
+<div class="modal" id="signUp" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title" id="staticBackdropLabel">Register</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form action="#">
+          <div class="form_field">
+            <input type="text" name="fName" class="form-control" id="first_name" placeholder="First Name">
+          </div>
+          <div class="form_field mt-3">
+            <input type="text" name="lName" class="form-control" id="last_name" placeholder="Last Name">
+          </div>
+          <div class="form_field mt-3">
+            <input type="text" name="phone_num" class="form-control" id="phone_num" placeholder="Phone Number">
+          </div>
+          <div class="form_field mt-3">
+            <input type="email" name="email" class="form-control" id="email" placeholder="Email" required>
+          </div>
+          <div class="form_field mt-3">
+            <input type="password" name="password" class="form-control" id="password" placeholder="Password" required>
+          </div>
+          <div class="form_field mt-3">
+            <input type="date" name="date" class="form-control" id="date" placeholder="Date of Birth" required>
+          </div>
+          <button type="submit" class="btn btn-primary">Sign Up</button>
+          <div class="dont_have d-flex">
+            <p>Already have an account?</p>
+            <a href="#" onclick="switchModal('signUp', 'login')">Log in</a>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div> 
+<!-- Sign Up Modal End -->
+
+<!-- Content Wrapper Start -->
+<div class="content-wrapper">
+  
+  <!-- balance check start -->
+   <section class="balance">
+    <div class="container-fluid">
+      <div class="balance_wrapper">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="game_blc d-flex">
+              <div class="icon">
+                <i class="fa-solid fa-sack-dollar"></i>
+              </div>
+              <div class="blc">
+                <p>$10.99</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+   </section>
+  <!-- balance check end -->
+
+
+    <!-- hotpotato section start -->
+     <section class="hotpotato">
+      <div class="container-fluid">
+        <div class="potato_inner">
+          <div class="potato">
+              <div class="hotpotato_item d-flex">
+                <div class="img">
+                  <img src="assets/hotpotato/BNG074.png" alt="">
+                </div>
+                <div class="us_dollar">
+                  <div class="us_title">
+                    <h3>hotpotato</h3>
+                  </div>
+                  <div class="dollar">
+                    <img src="assets/usdt-dollar.png" alt="">
+                    <span>990.90</span>
+                  </div>
+                </div>
+              </div>
+              <div class="hotpotato_item d-flex">
+                <div class="img">
+                  <img src="assets/hotpotato/JL0038.png" alt="">
+                </div>
+                <div class="us_dollar">
+                  <div class="us_title">
+                    <h3>hotpotato</h3>
+                  </div>
+                  <div class="dollar">
+                    <img src="assets/usdt-dollar.png" alt="">
+                    <span>990.90</span>
+                  </div>
+                </div>
+              </div>
+              <div class="hotpotato_item d-flex">
+                <div class="img">
+                  <img src="assets/hotpotato/JL0162.png" alt="">
+                </div>
+                <div class="us_dollar">
+                  <div class="us_title">
+                    <h3>hotpotato</h3>
+                  </div>
+                  <div class="dollar">
+                    <img src="assets/usdt-dollar.png" alt="">
+                    <span>990.90</span>
+                  </div>
+                </div>
+              </div>
+              <div class="hotpotato_item d-flex">
+                <div class="img">
+                  <img src="assets/hotpotato/PP0218.png" alt="">
+                </div>
+                <div class="us_dollar">
+                  <div class="us_title">
+                    <h3>hotpotato</h3>
+                  </div>
+                  <div class="dollar">
+                    <img src="assets/usdt-dollar.png" alt="">
+                    <span>990.90</span>
+                  </div>
+                </div>
+              </div>
+              <div class="hotpotato_item d-flex">
+                <div class="img">
+                  <img src="assets/hotpotato/SEX005.png" alt="">
+                </div>
+                <div class="us_dollar">
+                  <div class="us_title">
+                    <h3>hotpotato</h3>
+                  </div>
+                  <div class="dollar">
+                    <img src="assets/usdt-dollar.png" alt="">
+                    <span>990.90</span>
+                  </div>
+                </div>
+              </div>
+              <div class="hotpotato_item d-flex">
+                <div class="img">
+                  <img src="assets/hotpotato/JL0162.png" alt="">
+                </div>
+                <div class="us_dollar">
+                  <div class="us_title">
+                    <h3>hotpotato</h3>
+                  </div>
+                  <div class="dollar">
+                    <img src="assets/usdt-dollar.png" alt="">
+                    <span>990.90</span>
+                  </div>
+                </div>
+              </div>
+          </div>
+        </div>
+      </div>
+     </section>
+    <!-- hotpotato section start -->
+
+    <!-- banner start -->
+     <section class="banner">
+      <div class="container-fluid">
+        <div class="banner_wrapper">
+          <div class="row">
+            <div class="col-md-6">
+              <div class="banner_item">
+                <img src="assets/bet_img1.jpg" alt="">
+                <div class="banner_title">
+                  <h3>Get Your <br> Bonus With <br> Haveii Week</h3>
+                  <div class="gift_bonus">
+                    <div class="left">
+                      <img src="assets/gift_bonus.png" alt="">
+                    </div>
+                    <div class="right">
+                      <p>Bonus prize</p>
+                      <h3>$100 000</h3>
+                    </div>
+                  </div>
+                  <button type="button" class="btn">Participate</button>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="banner_item">
+                <img src="assets/bet_img2-min.png" alt="">
+                <div class="banner_title banner_title_two">
+                  <h3>Got Referral <br> Code From <br> A Friend?</h3>
+                  <button type="button" class="btn">Enter Code</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+     </section>
+    <!-- banner end -->
+
+    <!-- games start -->
+     <section class="spine_games">
+      <div class="container-fluid">
+        <div class="game_wrapper">
+          <div class="row">
+            <div class="col-md-3">
+              <div class="game_item">
+                <div class="game_img">
+                  <img src="assets/game_img/mines.webp" alt="">
+                </div>
+                <div class="game_title">
+                  <div class="title">
+                    <h3>Mines</h3>
+                  </div>
+                  <div class="play">
+                   <a href="#">
+                    <i class="fa-solid fa-play"></i>
+                   </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="game_item">
+                <div class="game_img">
+                  <img src="assets/game_img/ka0o0tozknnidvbemsyr.webp" alt="">
+                </div>
+                <div class="game_title">
+                  <div class="title">
+                    <h3>Mines</h3>
+                  </div>
+                  <div class="play">
+                   <a href="#">
+                    <i class="fa-solid fa-play"></i>
+                   </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="game_item">
+                <div class="game_img">
+                  <img src="assets/game_img/1680075900582.webp" alt="">
+                </div>
+                <div class="game_title">
+                  <div class="title">
+                    <h3>Mines</h3>
+                  </div>
+                  <div class="play">
+                   <a href="#">
+                    <i class="fa-solid fa-play"></i>
+                   </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="game_item">
+                <div class="game_img">
+                  <img src="assets/game_img/images.jpeg" alt="">
+                </div>
+                <div class="game_title">
+                  <div class="title">
+                    <h3>Mines</h3>
+                  </div>
+                  <div class="play">
+                   <a href="#">
+                    <i class="fa-solid fa-play"></i>
+                   </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+     </section>
+    <!-- games end -->
+
+    <!-- bet on gam start -->
+    <section class="bet_on_game">
+      <div class="container-fluid">
+        <div class="beton_wrapper">
+          <div class="row">
+            <div class="col-md-6">
+              <div class="beton_item">
+                <a href="#">
+                  <img src="assets/betongame-promo-baner-4.png" alt="">
+                
+                <div class="beton_title">
+                  <span>Casino</span>
+                  <h3>Casino welcome pack</h3>
+                </div>
+              </div>
+            </a>
+            </div>
+            <div class="col-md-6">
+              <div class="beton_item">
+                <a href="">
+                <img src="assets/betongame-promo-baner-3.png" alt="">
+                <div class="beton_title">
+                  <span>Sport</span>
+                  <h3>Free bet for your first <br> deposit</h3>
+                </div>
+              </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+     </section>
+    <!-- bet on gam end -->
+
+    <!-- all slots start -->
+     <section class="slots">
+      <div class="container-fluid">
+        <div class="slots_wrapper">
+          <div class="slot_inner">
+            <h4>ALL SLOTS</h4>
+            <div class="see_more_btn">
+              <button type="button" class="btn btn-sm">View All</button>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-3">
+              <div class="slot_item">
+                <img src="assets/slots/123167.jpg" alt="">
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="slot_item">
+                <img src="assets/slots/125956.jpg" alt="">
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="slot_item">
+                <img src="assets/slots/img57843.jpeg" alt="">
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="slot_item">
+                <img src="assets/slots/img63089.jpeg" alt="">
+              </div>
+            </div>
+          </div>
+          <div class="row mt-4">
+            <div class="col-md-3">
+              <div class="slot_item">
+                <img src="assets/slots/img63397.jpeg" alt="">
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="slot_item">
+                <img src="assets/slots/img68965.jpeg" alt="">
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="slot_item">
+                <img src="assets/slots/img77859.jpeg" alt="">
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="slot_item">
+                <img src="assets/slots/post13-copyright-890x664.jpg" alt="">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+     </section>
+    <!-- all slots end -->
+
+     <!-- popular game start -->
+      <section class="popular_game">
+        <div class="container-fluid">
+          <div class="popular_wrapper">
+            <div class="popular_game_title d-flex align-items-center">
+              <i class="fa-solid fa-fire-flame-curved"></i>
+              <h3>Popular</h3>
+            </div>
+            <div class="popular mt-4">
+                <div class="popular_item">
+                  <a href="#">
+                    <img src="assets/popular/GM0029.webp" alt="">
+                  </a>
+                  <div class="popular_link">
+                    <a href="">Play Now</a>
+                  </div>
+                </div>
+                <div class="popular_item">
+                  <a href="#">
+                    <img src="assets/popular/GM0034.webp" alt="">
+                  </a>
+                  <div class="popular_link">
+                    <a href="">Play Now</a>
+                  </div>
+                </div>
+                <div class="popular_item">
+                  <a href="#">
+                    <img src="assets/popular/JL0033.webp" alt="">
+                  </a>
+                  <div class="popular_link">
+                    <a href="">Play Now</a>
+                  </div>
+                </div>
+                <div class="popular_item">
+                  <a href="#">
+                    <img src="assets/popular/JL0036.webp" alt="">
+                  </a>
+                  <div class="popular_link">
+                    <a href="">Play Now</a>
+                  </div>
+            </div>
+            <div class="popular_item">
+              <a href="#">
+                <img src="assets/popular/JL0038.png" alt="">
+              </a>
+              <div class="popular_link">
+                <a href="">Play Now</a>
+              </div>
+            </div>
+            <div class="popular_item">
+              <a href="#">
+                <img src="assets/popular/JL0045.png" alt="">
+              </a>
+              <div class="popular_link">
+                <a href="">Play Now</a>
+              </div>
+                </div>
+            <div class="popular_item">
+              <a href="#">
+                <img src="assets/popular/JL0125.webp" alt="">
+              </a>
+              <div class="popular_link">
+                <a href="">Play Now</a>
+              </div>
+        </div>
+        <div class="popular_item">
+          <a href="#">
+            <img src="assets/popular/JL0156.webp" alt="">
+          </a>
+          <div class="popular_link">
+            <a href="">Play Now</a>
+          </div>
+        </div>
+
+        <div class="popular_item">
+          <a href="#">
+            <img src="assets/popular/JL0162.webp" alt="">
+          </a>
+          <div class="popular_link">
+            <a href="">Play Now</a>
+          </div>
+        </div>
+
+        <div class="popular_item">
+          <a href="#">
+            <img src="assets/popular/PG0147.webp" alt="">
+          </a>
+          <div class="popular_link">
+            <a href="">Play Now</a>
+          </div>
+        </div>
+
+        <div class="popular_item">
+          <a href="#">
+            <img src="assets/popular/PSON0A.webp" alt="">
+          </a>
+          <div class="popular_link">
+            <a href="">Play Now</a>
+          </div>
+        </div>
+
+          </div>
+        </div>
+      </section>
+     <!-- popular game start -->
+
+
+      <!-- footer start -->
+   <footer class="footer">
+    <div class="container-fluid">
+      <div class="footer_wrapper">
+        <div class="row">
+          <div class="col-md-4">
+            <div class="footer_item">
+              <img src="assets/logo.png" alt="">
+              <p>For questions or suggestions, <br> please visit support-en@bettwowin.com</p>
+            </div>
+          </div>
+          <div class="col-md-2">
+            <div class="footer_item">
+              <h5>Policies</h5>
+              <div class="footer_menu">
+                <ul>
+                  <li class="nav-link"><a href="#">Tearms of Service</a></li>
+                  <li class="nav-link"><a href="#">Privacy Policy</a></li>
+                  <li class="nav-link"><a href="#">Bonus & Promotion</a></li>
+                  <li class="nav-link"><a href="#">Redeem a Promo</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-2">
+            <div class="footer_item">
+              <h5>Promos</h5>
+              <div class="footer_menu">
+                <ul>
+                  <li class="nav-link"><a href="#">VIP Club</a></li>
+                  <li class="nav-link"><a href="#">Promotion</a></li>
+                  <li class="nav-link"><a href="#">Redeem</a></li>
+                  <li class="nav-link"><a href="#">Affiliate Program</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-2">
+            <div class="footer_item">
+              <h5>Support</h5>
+              <div class="footer_menu">
+                <ul>
+                  <li class="nav-link"><a href="#">About Us</a></li>
+                  <li class="nav-link"><a href="#">Live Support</a></li>
+                  <li class="nav-link"><a href="#">Help Center</a></li>
+                  <li class="nav-link"><a href="#">Bet2Win Official</a></li>
+                  <li class="nav-link"><a href="#">Ro Responsibility</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-2">
+            <div class="footer_item">
+              <h5>Community</h5>
+              <div class="footer_menu">
+                <ul>
+                  <li class="nav-link">
+                  <a href="#">
+                    <i class="fa-brands fa-x-twitter"></i>
+                  </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+   </footer>
+  <!-- footer end -->
+
+
+</div>
+<!-- Content Wrapper End -->
+
+  <!-- Main Sidebar Container -->
+  <aside class="main-sidebar sidebar-dark-primary elevation-4">
+
+      <!-- Sidebar Menu -->
+      <nav class="mt-2">
+        <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+          <!-- Add icons to the links using the .nav-icon class
+               with font-awesome or any other icon font library -->
+          <li class="nav-item has-treeview">
+            <a href="#" class="nav-link">
+              <i class="nav-icon fa-solid fa-house"></i>
+              <p>
+                Dashboard
+              </p>
+            </a>
+          </li>
+          <li class="nav-item has-treeview">
+            <a href="#" class="nav-link">
+              <i class="nav-icon fa-solid fa-fire"></i>
+              <p>
+                Popular
+              </p>
+            </a>
+          </li>
+          <li class="nav-item has-treeview">
+            <a href="#" class="nav-link">
+              <i class="nav-icon fa-brands fa-buysellads"></i>
+              <p>
+                Bonus Buys
+              </p>
+            </a>
+          </li>
+          <li class="nav-item has-treeview">
+            <a href="#" class="nav-link">
+              <i class="nav-icon fa-solid fa-film"></i>
+              <p>
+                Game Shows
+              </p>
+            </a>
+          </li>
+          <li class="nav-item has-treeview">
+            <a href="#" class="nav-link">
+              <i class="nav-icon fa-solid fa-circle-dollar-to-slot"></i>
+              <p>
+                Slots
+              </p>
+            </a>
+          </li>
+          <li class="nav-item has-treeview">
+            <a href="#" class="nav-link">
+              <i class="nav-icon fa-solid fa-rocket"></i>
+              <p>
+                Games
+              </p>
+            </a>
+          </li>
+          <li class="nav-item has-treeview">
+            <a href="#" class="nav-link">
+              <i class="nav-icon fa-solid fa-splotch"></i>
+              <p>
+                Roulette
+              </p>
+            </a>
+          </li>
+        </ul>
+      </nav>
+      <!-- /.sidebar-menu -->
+    </div>
+    <!-- /.sidebar -->
+  </aside>
+
+ 
+</div>
+<!-- ./wrapper -->
+
+
+
+<!-- jQuery -->
+<script src="js/jquery.min.js"></script>
+<!-- jQuery UI 1.11.4 -->
+<script src="js/jquery-ui.min.js"></script>
+<!-- slick min js -->
+ <script src="js/slick.min.js"></script>
+<!-- Bootstrap 5.2 -->
+<script src="js/bootstrap.bundle.min.js"></script>
+<!-- overlayScrollbars -->
+<script src="js/jquery.overlayScrollbars.min.js"></script>
+<!-- Sidebar App -->
+<script src="js/sidebar.js"></script>
+<!-- Custom Js -->
+ <script src="js/script.js"></script>
+
+
+</body>
+</html>
